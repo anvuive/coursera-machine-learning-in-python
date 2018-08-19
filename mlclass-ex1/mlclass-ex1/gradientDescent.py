@@ -20,13 +20,11 @@ def gradientDescent(X, y, theta, alpha, num_iters):
         #       of the cost function (computeCost) and gradient here.
         #
 
-        theta = theta - alpha*(1.0/m) * np.transpose(X).dot(X.dot(theta) - np.transpose([y]))
+        theta = 0
 
         # ============================================================
 
         # Save the cost J in every iteration    
-        import computeCost as cc
-        J_history[i] = cc.computeCost(X, y, theta)
-        # print(J_history[i])
+        
 
     return theta
