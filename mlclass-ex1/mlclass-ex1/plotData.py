@@ -12,9 +12,5 @@ def plotData(x, y):
 #               population and revenue data have been passed in
 #               as the x and y arguments of this function.
 
-
-    # fig = plt.figure() # open a new figure window
-    
-
-    
+# fig = plt.figure() # open a new figure window
 # ============================================================
