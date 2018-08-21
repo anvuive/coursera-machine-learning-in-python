@@ -31,7 +31,7 @@ print('5x5 Identity Matrix: ')
 
 print(wue.warmUpExercise())
 
-raw_input('Program paused. Press enter to continue.\n')
+input('Program paused. Press enter to continue.\n')
 
 ## ======================= Part 2: Plotting =======================
 print('Plotting Data...')
@@ -46,7 +46,7 @@ m = len(y) # number of training examples
 
 pd.plotData(X, y)
 
-raw_input('Program paused. Press enter to continue.\n')
+input('Program paused. Press enter to continue.\n')
 
 ## =================== Part 3: Gradient descent ===================
 print('Running Gradient Descent...')
@@ -59,7 +59,7 @@ iterations = 1500
 alpha = 0.01
 
 # compute and display initial cost
-print cc.computeCost(X_padded, y, theta)
+print(cc.computeCost(X_padded, y, theta))
 
 # run gradient descent
 theta = gd.gradientDescent(X_padded, y, theta, alpha, iterations)
@@ -80,7 +80,7 @@ print("For population = 35,000, we predict a profit of {:f}".format( float(predi
 predict2 = np.array([1, 7]).dot(theta)
 print('For population = 70,000, we predict a profit of {:f}'.format( float(predict2*10000) ))
 
-raw_input('Program paused. Press enter to continue.\n')
+input('Program paused. Press enter to continue.\n')
 
 ## ============= Part 4: Visualizing J(theta_0, theta_1) =============
 print('Visualizing J(theta_0, theta_1)...')
@@ -129,4 +129,4 @@ plt.show(block=False)
 plt.hold(False)
 
 
-raw_input('Program paused. Press enter to finish.\n')
+input('Program paused. Press enter to finish.\n')
