@@ -21,7 +21,8 @@ def computeCost(X, y, theta):
 	#	theta is an (n+1)-dimensional vector 
 	#	X is an m x (n+1)-dimensional matrix
 	#	y is an m-dimensional vector
-
+    s = np.power ((X.dot(theta) - np.transpose ([y])),2)
+    J = (1 / (2*m)) * s.sum (axis = 0)
     return J
 
 

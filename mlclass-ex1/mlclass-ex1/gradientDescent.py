@@ -10,7 +10,7 @@ def gradientDescent(X, y, theta, alpha, num_iters):
     m = len(y) # number of training examples
     J_history = np.zeros((num_iters, 1))
 
-    for i in xrange(num_iters):
+    for i in range(num_iters):
 
         # ====================== YOUR CODE HERE ======================
         # Instructions: Perform a single gradient step on the parameter vector
@@ -25,6 +25,5 @@ def gradientDescent(X, y, theta, alpha, num_iters):
         # ============================================================
 
         # Save the cost J in every iteration    
-        
-
+        theta = theta - alpha*(1/m)*np.transpose(X).dot(X.dot(theta)-np.transpose([y]))
     return theta

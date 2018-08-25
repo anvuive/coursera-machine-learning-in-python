@@ -15,6 +15,7 @@ def normalEqn(X, y):
 # ---------------------- Sample Solution ----------------------
 
     theta = 0
+    theta = np.linalg.inv (np.transpose (X).dot(X))*np.transpose(X).dot(y)
     return theta
 
 # -------------------------------------------------------------

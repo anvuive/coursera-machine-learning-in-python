@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-
+import numpy as np
 
 def plotData(x, y):
     # PLOTDATA Plots the data points x and y into a new figure
@@ -16,4 +16,11 @@ def plotData(x, y):
     # fig = plt.figure() # open a new figure window
     # ============================================================
 
-    pass # remove this line before working on this function
+    X, y = np.loadtxt ("ex1data1.txt",delimiter = ",", unpack = True)
+    fig = plt.figure ()
+    ax = fig.add_subplot (111)
+    ax.scatter (X, y, color = "r", marker = "+")
+    plt.title ("Population and Profit")
+    plt.xlabel ("Population")
+    plt.ylabel ("Profit")
+    plt.savefig ("plotdata.png")

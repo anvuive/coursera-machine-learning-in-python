@@ -38,7 +38,7 @@ plt.legend((p1, p2), ('y = 1', 'y = 0'), numpoints=1, handlelength=0)
 
 plt.show(block=False) # prevents having to close the graph to move forward with ex2_reg.py
 
-raw_input('Program paused. Press enter to continue.\n')
+input('Program paused. Press enter to continue.\n')
 
 
 ## =========== Part 1: Regularized Logistic Regression ============
@@ -72,7 +72,7 @@ print('Cost at initial theta (zeros): {:f}'.format(cost))
 # print('Gradient at initial theta (zeros):')
 # print(grad)
 
-raw_input('Program paused. Press enter to continue.\n')
+input('Program paused. Press enter to continue.\n')
 
 
 ## ============= Part 2: Regularization and Accuracies =============
@@ -109,5 +109,5 @@ p = pr.predict(theta, X)
 
 print('Train Accuracy: {:f}'.format(np.mean(p == y) * 100))
 
-raw_input('Program paused. Press enter to continue.\n')
+input('Program paused. Press enter to continue.\n')
 

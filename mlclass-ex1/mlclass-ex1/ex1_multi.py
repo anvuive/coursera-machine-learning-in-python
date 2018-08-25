@@ -31,10 +31,10 @@ m = len(y) # number of training examples
 
 # Print out some data points
 print('First 10 examples from the dataset: \n')
-for i in xrange(10):
+for i in range(10):
     print ("x = [{:.0f} {:.0f}], y = {:.0f}".format(X[i,0], X[i,1], y[i]))
 
-raw_input('Program paused. Press enter to continue.\n')
+input('Program paused. Press enter to continue.\n')
 
 # Scale features and set them to zero mean
 print('Normalizing Features...')
@@ -59,7 +59,7 @@ theta = np.zeros((3, 1))
 theta, J_history = gdm.gradientDescentMulti(X_padded, y, theta, alpha, num_iters)
 
 # Plot the convergence graph
-plt.plot(xrange(J_history.size), J_history, "-b", linewidth=2 )
+plt.plot(range(J_history.size), J_history, "-b", linewidth=2 )
 plt.xlabel('Number of iterations')
 plt.ylabel('Cost J')
 plt.show(block=False)
@@ -83,7 +83,7 @@ price = np.array(house_norm_padded).dot(theta)
 
 print("Predicted price of a 1650 sq-ft, 3 br house (using gradient descent):\n ${:,.2f}".format(price[0]))
 
-raw_input('Program paused. Press enter to continue.\n')
+input('Program paused. Press enter to continue.\n')
 
 ## ================ Part 3: Normal Equations ================
 

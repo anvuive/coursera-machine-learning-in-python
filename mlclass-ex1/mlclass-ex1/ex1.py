@@ -93,8 +93,8 @@ theta1_vals = np.linspace(-1, 4, 100)
 J_vals = np.zeros((len(theta0_vals), len(theta1_vals)))
 
 # Fill out J_vals
-for i in xrange(len(theta0_vals)):
-    for j in xrange(len(theta1_vals)):
+for i in range(len(theta0_vals)):
+    for j in range(len(theta1_vals)):
         t = [[theta0_vals[i]], [theta1_vals[j]]]
         J_vals[i,j] = cc.computeCost(X_padded, y, t)
 

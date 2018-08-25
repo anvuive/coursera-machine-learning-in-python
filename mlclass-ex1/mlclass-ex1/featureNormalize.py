@@ -28,6 +28,11 @@ def featureNormalize(X):
 #
 # Hint: You might find the 'mean' and 'std' functions useful.
 #       
+    for i in range (X.shape[1]):
+        mu[:,i] = np.mean (X[:,i])
+        sigma[:, i] = np.std (X[:,i])
+        X_norm [:, i] = (X[:, i] -  mu[:, i]) / sigma[:, i]
+    return X_norm, mu, sigma
 
     
 

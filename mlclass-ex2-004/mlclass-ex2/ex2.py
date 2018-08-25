@@ -45,7 +45,7 @@ plt.legend((p1, p2), ('Admitted', 'Not Admitted'), numpoints=1, handlelength=0)
 
 plt.show(block=False) # prevents having to close the graph to move forward with ex2.py
 
-raw_input('Program paused. Press enter to continue.\n')
+input('Program paused. Press enter to continue.\n')
 # plt.close()
 
 ## ============ Part 2: Compute Cost and Gradient ============
@@ -67,7 +67,7 @@ print('Cost at initial theta (zeros): {:f}'.format(cost))
 print('Gradient at initial theta (zeros):')
 print(grad)
 
-raw_input('Program paused. Press enter to continue.\n')
+input('Program paused. Press enter to continue.\n')
 
 
 ## ============= Part 3: Optimizing using fmin (and fmin_bfgs)  =============
@@ -93,7 +93,7 @@ pdb.plotDecisionBoundary(theta, X_padded, y)
 plt.hold(False) # prevents further drawing on plot
 plt.show(block=False) 
 
-raw_input('Program paused. Press enter to continue.\n')
+input('Program paused. Press enter to continue.\n')
 
 
 ## ============== Part 4: Predict and Accuracies ==============
@@ -116,4 +116,4 @@ p = pr.predict(theta, X_padded)
 
 print('Train Accuracy: {:f}'.format(np.mean(p == y) * 100))
 
-raw_input('Program paused. Press enter to continue.\n')
+input('Program paused. Press enter to continue.\n')
