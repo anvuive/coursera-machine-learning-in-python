@@ -18,10 +18,7 @@ def predict(theta, X):
 #               You should set p to a vector of 0's and 1's
 #
 
-    sigValue = sigmoid( np.dot(X,theta) )
-    p = sigValue >= 0.5
 
-    return p
 
 # =========================================================================
 

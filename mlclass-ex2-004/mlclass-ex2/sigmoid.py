@@ -13,9 +13,6 @@ def sigmoid(z):
 #               vector or scalar).
 
 
-    # g = 1/(1 + np.exp(-z))
-    g = expit(z)
 
-    return g
 
 # =============================================================
