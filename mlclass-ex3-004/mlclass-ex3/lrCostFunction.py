@@ -24,26 +24,23 @@ def lrCostFunction(theta, X, y, lambda_reg, return_grad=False):
     #
 
     # taken from costFunctionReg.py
-    one = y * np.transpose(np.log( sigmoid( np.dot(X,theta) ) ))
-    two = (1-y) * np.transpose(np.log( 1 - sigmoid( np.dot(X,theta) ) ))
-    reg = ( float(lambda_reg) / (2*m)) * np.power(theta[1:theta.shape[0]],2).sum()
-    J = -(1./m)*(one+two).sum() + reg
+    # % Hint: The computation of the cost function and gradients can be
+    # %       efficiently vectorized. For example, consider the computation
+    # %
+    # %           sigmoid(X * theta)
+    # %
+    # %       Each row of the resulting matrix will contain the value of the
+    # %       prediction for that example. You can make use of this to vectorize
+    # %       the cost function and gradient computations.
+    # %
+    # % Hint: When computing the gradient of the regularized cost function,
+    # %       there're many possible vectorized solutions, but one solution
+    # %       looks like:
+    # %           grad = (unregularized gradient for logistic regression)
+    # %           temp = theta;
+    # %           temp(1) = 0;   % because we don't add anything for j = 0
+    # %           grad = grad + YOUR_CODE_HERE (using the temp variable)
+    # %
 
-    grad = (1./m) * np.dot(sigmoid( np.dot(X,theta) ).T - y, X).T + ( float(lambda_reg) / m )*theta
-
-    # the case of j = 0 (recall that grad is a n+1 vector)
-    grad_no_regularization = (1./m) * np.dot(sigmoid( np.dot(X,theta) ).T - y, X).T
-
-    # and then assign only the first element of grad_no_regularization to grad
-    grad[0] = grad_no_regularization[0]
-
-    # display cost at each iteration
-    sys.stdout.write("Cost: %f   \r" % (J) )
-    sys.stdout.flush()
-
-    if return_grad:
-        return J, grad.flatten()
-    else:
-        return J
 
     # =============================================================

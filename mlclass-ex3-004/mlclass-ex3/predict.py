@@ -23,20 +23,7 @@ def predict(Theta1, Theta2, X):
     #               vector containing labels between 1 to num_labels.
     #
 
-    # add column of ones as bias unit from input layer to second layer
-    X = np.column_stack((np.ones((m,1)), X)) # = a1
 
-    # calculate second layer as sigmoid( z2 ) where z2 = Theta1 * a1
-    a2 = s.sigmoid( np.dot(X,Theta1.T) )
-
-    # add column of ones as bias unit from second layer to third layer
-    a2 = np.column_stack((np.ones((a2.shape[0],1)), a2))
-
-    # calculate third layer as sigmoid ( z3 ) where z3 = Theta2 * a2
-    a3 = s.sigmoid( np.dot(a2,Theta2.T) )
-
-    # get indices as in predictOneVsAll
-    p = np.argmax(a3, axis=1)
 
     # =========================================================================
 
