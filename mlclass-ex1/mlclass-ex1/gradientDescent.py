@@ -1,5 +1,5 @@
 import numpy as np
-
+import computeCost as cc
 def gradientDescent(X, y, theta, alpha, num_iters):
 
     #GRADIENTDESCENT Performs gradient descent to learn theta
@@ -20,10 +20,9 @@ def gradientDescent(X, y, theta, alpha, num_iters):
         #       of the cost function (computeCost) and gradient here.
         #
 
-        theta = 0
-
         # ============================================================
 
         # Save the cost J in every iteration    
         theta = theta - alpha*(1/m)*np.transpose(X).dot(X.dot(theta)-np.transpose([y]))
+        print(cc.computeCost(X, y, theta))
     return theta

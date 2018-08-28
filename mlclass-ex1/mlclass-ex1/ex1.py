@@ -31,7 +31,7 @@ print('5x5 Identity Matrix: ')
 
 print(wue.warmUpExercise())
 
-input('Program paused. Press enter to continue.\n')
+# input('Program paused. Press enter to continue.\n')
 
 ## ======================= Part 2: Plotting =======================
 print('Plotting Data...')
@@ -46,7 +46,7 @@ m = len(y) # number of training examples
 
 pd.plotData(X, y)
 
-input('Program paused. Press enter to continue.\n')
+# input('Program paused. Press enter to continue.\n')
 
 ## =================== Part 3: Gradient descent ===================
 print('Running Gradient Descent...')
@@ -73,7 +73,6 @@ plt.plot(X,X_padded.dot(theta),'-', label='Linear regression')
 plt.legend(loc='lower right')
 plt.draw()
 plt.hold(False) # prevents further plotting on the same figure
-
 # # Predict values for population sizes of 35,000 and 70,000
 predict1 = np.array([1, 3.5]).dot(theta)
 print("For population = 35,000, we predict a profit of {:f}".format( float(predict1*10000) ))
