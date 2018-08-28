@@ -56,7 +56,6 @@ input('Program paused. Press enter to continue.\n')
 #  Setup the data matrix appropriately, and add ones for the intercept term
 m,n = X.shape
 X_padded = np.column_stack((np.ones((m,1)), X)) 
-
 # Initialize fitting parameters
 initial_theta = np.zeros((n + 1, 1))
 
